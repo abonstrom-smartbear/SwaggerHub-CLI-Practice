@@ -29,12 +29,12 @@ jobs:
         env:
           SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
         run: |
-          swaggerhub api:get Organization_One/Products-API/1.0.0
+          swaggerhub api:get AlexsDemoOrg/ADefinitelyRealAPI/1.0.0
       - name: Validate definition
         env:
           SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
         run: |
-          swaggerhub api:validate Organization_One/Products-API/1.0.0
+          swaggerhub api:validate AlexsDemoOrg/ADefinitelyRealAPI/1.0.0
           
   Publish-Documentation:
     runs-on: ubuntu-latest
@@ -52,12 +52,12 @@ jobs:
         env:
           SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
         run: |
-          swaggerhub api:publish Organization_One/Products-API/1.0.0
+          swaggerhub api:publish AlexsDemoOrg/ADefinitelyRealAPI/1.0.0
       - name: Make new version the default
         env:
           SWAGGERHUB_API_KEY: ${{secrets.SWAGGERHUB_API_KEY}}
         run: |
-          swaggerhub api:setdefault Organization_One/Products-API/1.0.0
+          swaggerhub api:setdefault AlexsDemoOrg/ADefinitelyRealAPI/1.0.0
           
           # FILLER ROOM
           # FILLER ROOM
